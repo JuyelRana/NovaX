@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFE3E3"
+    android:orientation="vertical"
+    tools:context=".activity.BalanceActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_balance"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#CFE3E3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1.8"
+            android:background="#CFE3E3"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="top"
+                android:layout_weight="1.95"
+                android:background="@drawable/rounded_shape_different_color"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:background="@drawable/small_rounded_shape"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:text="My Balance"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_product_loss"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/neosans_pro_regular"
+                                android:gravity="end"
+                                android:text="227.22"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_product_loss_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/neosans_pro_regular"
+                                android:text="Buying Power(HKD)"
+                                android:textColor="@color/black"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".15"
+                    android:background="#E7F5F8"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.95"
+                        android:background="#E7F5F8"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/holderLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.8"
+                            android:background="@drawable/rounded_shape_deepblue_color"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:id="@+id/depositeLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+
+                                <TextView
+                                    android:id="@+id/txtdepsite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/neosans_pro_regular"
+                                    android:gravity="center"
+                                    android:text="DEPOSIT"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/deposite_withdraw_view"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimary"></View>
+
+                            <LinearLayout
+                                android:id="@+id/withdrawLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/txtwithdraw"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/neosans_pro_regular"
+                                    android:gravity="center"
+
+                                    android:text="WITHDRAW" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/convet_withdraw_view"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimary">
+
+                            </View>
+
+                            <LinearLayout
+                                android:id="@+id/convertLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/txtconvert"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/neosans_pro_regular"
+                                    android:gravity="center"
+
+                                    android:text="CONVERT" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Deposite Layout Start-->
+
+
+                <ScrollView
+                    android:id="@+id/depositelayoutContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.6"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight=".75"
+                            android:background="#E7F5F8"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.95"
+                                android:background="#E7F5F8"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.8"
+                                    android:background="@drawable/rounded_shape"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.85"
+                                            android:orientation="vertical"
+                                            android:visibility="visible">
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="left"
+                                                android:orientation="horizontal"
+                                                android:weightSum="2">
+
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="left"
+                                                    android:layout_weight="1.6"
+                                                    android:text="How do I make a deposit?"
+                                                    android:textColor="@color/colorPrimary"
+                                                    android:textSize="16dp" />
+
+
+                                                <ImageView
+                                                    android:id="@+id/depositeImage"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="15dp"
+                                                    android:layout_gravity="center"
+                                                    android:background="@drawable/icon_faq_one_deposite"
+                                                    android:gravity="left"
+                                                    android:textSize="16dp" />
+
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginBottom="10dp"
+                                                android:gravity="center"
+                                                android:orientation="vertical"
+                                                android:weightSum="2">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="2"
+                                                    android:text="Daily cutoff times are provided in the
+above. Your deposit will be reflected in
+your accountupon confirmation from
+our bank."
+                                                    android:textSize="14dp" />
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="left"
+                                                android:orientation="horizontal"
+                                                android:weightSum="2">
+
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="Deposit Details"
+                                                    android:textColor="@color/colorPrimary"
+                                                    android:textSize="16dp" />
+
+
+                                                <ImageView
+                                                    android:id="@+id/depositeDetailsImage"
+                                                    android:layout_width="15dp"
+                                                    android:layout_height="15dp"
+                                                    android:layout_gravity="center"
+                                                    android:background="@drawable/icon_faq_two_deposite"
+                                                    android:gravity="left"
+                                                    android:textSize="16dp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginBottom="10dp"
+                                                android:gravity="center"
+                                                android:orientation="vertical"
+                                                android:weightSum="2">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="2"
+                                                    android:text="The receipt should show your name/bank
+account number and deposit amount."
+                                                    android:textSize="14dp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnPhotoUpload"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/btn_camera_balance_deposite" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1.4"
+                            android:background="#E7F5F8"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.95"
+                                android:background="#E7F5F8"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.8"
+                                    android:background="@drawable/rounded_shape"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.85"
+                                            android:orientation="vertical"
+                                            android:visibility="visible">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:text="Bank Accounts"
+                                                android:textColor="@color/colorPrimary"
+                                                android:textSize="18dp" />
+
+
+                                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                                android:id="@+id/userDepositeAccountSpinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+                                            <!--android:entries="@array/list_user"-->
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:layout_marginStart="3dp"
+                                                android:layout_marginEnd="3dp"
+                                                android:background="@color/grey" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:text="Deposit Currency*"
+                                                android:textColor="@color/colorPrimary"
+                                                android:textSize="18dp" />
+
+                                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                                android:id="@+id/currencyDepositeSpinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:layout_marginStart="3dp"
+                                                android:layout_marginEnd="3dp"
+                                                android:background="@color/grey" />
+
+                                            <EditText
+                                                android:id="@+id/depositeAmount"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:backgroundTint="@color/grey"
+                                                android:fontFamily="@font/neosans_pro_regular"
+                                                android:hint="Amount (HKD)"
+                                                android:inputType="textPersonName"
+                                                android:textSize="14dp" />
+
+                                            <Button
+                                                android:id="@+id/buttonUploadBalanceDeposite"
+                                                android:layout_width="150dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="15dp"
+                                                android:background="@drawable/btn_upload_balance_deposite" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+                <!--Withdraw Layout Start-->
+
+                <LinearLayout
+                    android:id="@+id/withdrawlayoutContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:background="#E7F5F8"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.95"
+                        android:background="#E7F5F8"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.8"
+                            android:background="@drawable/rounded_shape"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.85"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:text="HKD"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18dp" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="10dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+
+                                        <TextView
+                                            android:id="@+id/txt_withdraw_amount_txt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.4"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="left"
+                                            android:text="Withdrawable Amount"
+                                            android:textSize="16dp" />
+
+
+                                        <TextView
+                                            android:id="@+id/txt_withdraw_amount"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".6"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="right"
+                                            android:text="227.22"
+                                            android:textSize="16dp" />
+
+
+                                    </LinearLayout>
+
+                                    <com.jaredrummler.materialspinner.MaterialSpinner
+                                        android:id="@+id/userAccountSpinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+                                    <!--android:entries="@array/list_user"-->
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="3dp"
+                                        android:layout_marginEnd="3dp"
+                                        android:background="@color/grey" />
+
+                                    <EditText
+                                        android:id="@+id/withdrawAmount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/grey"
+                                        android:fontFamily="@font/neosans_pro_regular"
+                                        android:hint="Amount (HKD)"
+                                        android:inputType="textPersonName"
+                                        android:textSize="14dp" />
+
+                                    <Button
+                                        android:id="@+id/buttonWithdraw"
+                                        android:layout_width="150dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="35dp"
+                                        android:background="@drawable/btn_withdraw" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--Convet Layout Start-->
+
+
+                <LinearLayout
+                    android:id="@+id/convertlayoutContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:background="#E7F5F8"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.95"
+                        android:background="#E7F5F8"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.8"
+                            android:background="@drawable/rounded_shape"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:weightSum="2">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1.9"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:text="HKD"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18dp" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="10dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+
+                                        <TextView
+                                            android:id="@+id/txt_withdraw_amount_convertPage"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.4"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="left"
+                                            android:text="Withdrawable Amount"
+                                            android:textSize="16dp" />
+
+
+                                        <TextView
+                                            android:id="@+id/txt_convert_amount"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".6"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="right"
+                                            android:text="227.22"
+                                            android:textSize="16dp" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="10dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+
+                                        <TextView
+                                            android:id="@+id/txt_convert_exchange_rate_txt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.4"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="left"
+                                            android:text="Indicative Exchange Rate"
+                                            android:textSize="16dp" />
+
+
+                                        <TextView
+                                            android:id="@+id/txt_convert_exchange_rate"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".6"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="right"
+                                            android:text="0.123"
+                                            android:textSize="16dp" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="10dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+
+                                        <TextView
+                                            android:id="@+id/txt_convert_approxAmount_txt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1.4"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="left"
+                                            android:text="Approx. Equivalent"
+                                            android:textSize="16dp" />
+
+
+                                        <TextView
+                                            android:id="@+id/txt_convert_approxAmount"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".6"
+                                            android:fontFamily="@font/neosans_pro_regular"
+                                            android:gravity="right"
+                                            android:text="0.00"
+                                            android:textSize="16dp" />
+
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Conversion Currency"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18dp" />
+
+                                    <com.jaredrummler.materialspinner.MaterialSpinner
+                                        android:id="@+id/currencySpinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+                                    <!--android:entries="@array/list_user"-->
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginStart="3dp"
+                                        android:layout_marginEnd="3dp"
+                                        android:background="@color/grey" />
+
+                                    <EditText
+                                        android:id="@+id/convertAmount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:backgroundTint="@color/grey"
+                                        android:fontFamily="@font/neosans_pro_regular"
+                                        android:hint="Amount (HKD)"
+                                        android:inputType="textPersonName"
+                                        android:textSize="14dp" />
+
+                                    <Button
+                                        android:id="@+id/buttonConvert"
+                                        android:layout_width="150dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/btn_convert" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight=".2"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:background="@color/grey"
+                        android:gravity="bottom" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:text="HK Stock Market Value is Delayed at least 15 minutes"
+                        android:textSize="12dp">
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

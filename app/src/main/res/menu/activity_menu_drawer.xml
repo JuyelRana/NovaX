@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icon_summary_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_portfolio"
+            android:icon="@drawable/icon_summary_portfoilo"
+            android:title="@string/portfolio" />
+        <item
+            android:id="@+id/nav_balance"
+            android:icon="@drawable/icon_nav_balance"
+            android:title="@string/balance" />
+        <item
+            android:id="@+id/nav_watchlist"
+            android:icon="@drawable/icon_nav_watchlist"
+            android:title="@string/watchlist" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/icon_summary_order"
+            android:title="@string/orders" />
+
+        <item
+            android:id="@+id/nav_social_traders"
+            android:icon="@drawable/icon_summary_social_trading_white"
+            android:title="@string/social_traders" />
+
+        <item android:title="">
+            <menu>
+                <item
+                    android:id="@+id/nav_contact_us"
+                    android:icon="@drawable/nav_icon_contact"
+                    android:title="@string/contact_us" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/icon_nav_logout"
+                    android:title="@string/logout" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

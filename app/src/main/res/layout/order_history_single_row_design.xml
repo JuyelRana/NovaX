@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/rounded_shape"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_marginBottom="10dp"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.9"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.95"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:layout_gravity="left"
+                    android:gravity="left">
+
+                    <ImageView
+                        android:id="@+id/img_order_history"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_product_name_history_order"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".8"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="left"
+                    android:text="US: NVIDIA"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_order_history_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="right"
+                    android:text="Yesterday, 515 AM"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.4"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="left"
+                    android:text="Direction"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_Direction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="right"
+                    android:text="Sell"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.4"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="left"
+                    android:text="Type"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_Type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="right"
+                    android:text=" Limit Order"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.4"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="left"
+                    android:text="Quantity"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_Quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="right"
+                    android:text="1,500"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.4"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="left"
+                    android:text="Limit Price"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_LimitPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="right"
+                    android:text="USD 1.75"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="left"
+                    android:text="Expiry Date "
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_ExpiryDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="right"
+                    android:text="Dec 12, 2018"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
