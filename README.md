@@ -1,5 +1,5 @@
 # NovaX
-A Mobile Trading App. I have designed [this](https://github.com/JuyelRana/NovaX/blob/master/design/Nova%20update%20v8%20(Light).pdf) wireframe for a company.
+A Mobile Trading App. I have designed [this](https://github.com/JuyelRana/NovaX/blob/master/design/Nova%20update%20v8%20(Light).pdf) wireframe for a company. This app is same as [8 Securities](https://play.google.com/store/apps/details?id=com.eigthsecurities.tradeflix&referrer=af_tranid%3Dv_CxUA5sb0834HFCQ1PyOQ%26shortlink%3D7ce42fe4%26pid%3DWebsite%26c%3DWebsite%26af_adset%3DGooglePlay%26af_sub1%3DEnglish%26af_web_id%3Dea33b69b-83b2-4fd8-b5d5-3ce6e910525d) app.
 
 <img src="design/wireframe.png">
 
