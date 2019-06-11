@@ -1,5 +1,5 @@
 # NovaX
-A Mobile Trading App 
+A Mobile Trading App. I have designed [this](https://github.com/JuyelRana/NovaX/blob/master/design/Nova%20update%20v8%20(Light).pdf) wireframe for a company.
 
 ## 1. Login Page 
 <img src="design/1. Login.png" width="480">
